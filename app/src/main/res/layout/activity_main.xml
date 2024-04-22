@@ -10,8 +10,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="345dp"
-        android:layout_height="197dp"
+        android:layout_width="325dp"
+        android:layout_height="204dp"
         app:cardBackgroundColor="@color/card_background"
         app:cardCornerRadius="20dp"
         app:cardElevation="15dp"
@@ -25,7 +25,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="182dp">
 
             <TextView
                 android:id="@+id/tvWeight"
@@ -83,21 +83,22 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvHeight"
-        android:layout_width="333dp"
-        android:layout_height="207dp"
+        android:layout_width="328dp"
+        android:layout_height="189dp"
         app:cardBackgroundColor="@color/card_background"
         app:cardCornerRadius="20dp"
         app:cardElevation="15dp"
         app:cardMaxElevation="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" >
+        app:layout_constraintVertical_bias="0.557">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="177dp">
 
             <TextView
                 android:id="@+id/tvHeight"
@@ -155,15 +156,16 @@
 
     <Button
         android:id="@+id/btnCalculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_orange_light"
+        android:layout_width="326dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/btn_background"
         android:text="Calculate"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintVertical_bias="0.784" />
 </androidx.constraintlayout.widget.ConstraintLayout>
