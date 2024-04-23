@@ -59,13 +59,12 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.855" />
 
-            <EditText
-                android:id="@+id/etKg"
+            <TextView
+                android:id="@+id/tvKg"
                 android:layout_width="107dp"
                 android:layout_height="47dp"
                 android:layout_marginStart="196dp"
                 android:ems="10"
-                android:inputType="text"
                 android:text="@string/kg"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -131,8 +130,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.855" />
 
-            <EditText
-                android:id="@+id/etCm"
+            <TextView
+                android:id="@+id/tvCm"
                 android:layout_width="107dp"
                 android:layout_height="47dp"
                 android:layout_marginStart="196dp"
