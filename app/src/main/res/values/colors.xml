@@ -7,4 +7,9 @@
     <color name="text_hint">#76788E</color>
     <color name="btn_background">#8C712F</color>
 
+    <color name="Under_Weight">#754A0A</color>
+    <color name="Normal">#4CAF50</color>
+    <color name="Over_Weight">#5E3845</color>
+    <color name="Obese">#702520</color>
+
 </resources>

@@ -200,7 +200,6 @@
                 android:id="@+id/tvResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="You Are Health"
                 android:textAlignment="center"
                 android:textColor="#0B8E11"
                 android:textSize="24sp"
