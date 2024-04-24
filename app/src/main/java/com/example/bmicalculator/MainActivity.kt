@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -28,19 +29,33 @@ class MainActivity : AppCompatActivity() {
             val weight = weightText.text.toString()
             val height = heightText.text.toString()
 
-            val bmi = weight.toFloat() / ((height.toFloat() / 100) * height.toFloat() / 100)
-            //get results with two decimal places
-            val bmi2Digits = String.format("%2f", bmi).toFloat()
-            displayResult(bmi2Digits)
+            if (validateInput(weight,height)) {
+                val bmi = weight.toFloat() / ((height.toFloat() / 100) * height.toFloat() / 100)
+                //get results with two decimal places
+                val bmi2Digits = String.format("%2f", bmi).toFloat()
+                displayResult(bmi2Digits)
+            }
 
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(id.cvWeight)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+    }
+    private fun validateInput(weight:String?, height:String?):Boolean {
 
+        return when{
+
+              weight.isNullOrEmpty() ->{
+                  Toast.makeText(this, "Weight Is Empty",Toast.LENGTH_LONG).show()
+                  return false
+              }
+
+            height.isNullOrEmpty() ->{
+                Toast.makeText(this, "height Is Empty",Toast.LENGTH_LONG).show()
+                return false
+            }
+            else ->{
+                return true
+            }
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -57,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         var color = 0
 
         when {
-            bmi > 18.50 -> {
+            bmi < 18.50 -> {
 
                 result = "Under Weight"
                 color = R.color.Under_Weight
