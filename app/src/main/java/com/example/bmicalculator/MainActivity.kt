@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         info.text = "Normal Range Is 18.5 - 24.9"
 
         var result = ""
-        var color = ""
+        var color = 0
 
         when {
             bmi > 18.50 -> {
@@ -87,6 +87,8 @@ class MainActivity : AppCompatActivity() {
 
         resultDescription.setTextColor(ContextCompat.getColor(this,color))
         resultDescription.text = result
+
+
 
     }
 }
